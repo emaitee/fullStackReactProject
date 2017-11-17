@@ -6,14 +6,12 @@ class FacultyList extends React.Component {
 	};
 
 	render() {
-		const depts = this.state.depts.sort((a, b) => (
-			b.votes - a.votes
-		));
+		
 		const departmentComponents = departments.map((department) => (
 				<Department
-					key={'department-' + product.id}
+					key={'department-' + department.id}
 					id={department.id}
-					faculty={product.faculty}
+					faculty={department.faculty}
 					department={product.department}
 			));
 		return(
