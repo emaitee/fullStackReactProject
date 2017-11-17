@@ -12,7 +12,7 @@ class FacultyList extends React.Component {
 					key={'department-' + department.id}
 					id={department.id}
 					faculty={department.faculty}
-					department={product.department}
+					department={department.department}
 			));
 		return(
 			<div className='ui unstackable items'>
@@ -23,10 +23,6 @@ class FacultyList extends React.Component {
 }
 
 class Department extends React.Component {
-	/*handleUpVote = () => (
-		this.props.onVote(this.props.id)
-	);*/
-
 	render() {
 		return(
 			<div className='item'>
@@ -35,9 +31,7 @@ class Department extends React.Component {
 							{this.props.id}
 					</div>
 					<div className='description'>
-						<a href={this.props.url}>
 							{this.props.department}
-						</a>
 						<p>
 							{this.props.faculty}
 						</p>
